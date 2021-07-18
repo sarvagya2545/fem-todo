@@ -1,13 +1,14 @@
 import React from 'react';
-import { Background } from './components';
+import { ThemeContextProvider } from './contexts/ThemeContext';
 import GlobalStyle from './globalStyles';
+import MainPage from './pages/MainPage';
 
 const App = () => {
     return (
-        <>
+        <ThemeContextProvider>
             <GlobalStyle/>
-            <Background/>
-        </>
+            <MainPage/>
+        </ThemeContextProvider>
     );
 }
 

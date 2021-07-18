@@ -8,7 +8,7 @@ export const BackgroundImage = styled.div`
 `;
 
 export const BackgroundCover = styled.div`
-    background: ${({ theme }) => theme === 'dark' ? '#000' : '#fff'};
+    background: ${({ theme }) => theme.bg};
     height: 60vh;
     width: 100vw;
     position: fixed;
