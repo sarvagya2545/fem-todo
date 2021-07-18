@@ -1,8 +1,13 @@
 import React from 'react';
+import { Background } from './components';
+import GlobalStyle from './globalStyles';
 
 const App = () => {
     return (
-        <h1>App</h1>
+        <>
+            <GlobalStyle/>
+            <Background/>
+        </>
     );
 }
 
