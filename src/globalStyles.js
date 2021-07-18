@@ -5,6 +5,7 @@ const globalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: inherit;
+        font-family: inherit;
     }
 
     html {
@@ -14,6 +15,7 @@ const globalStyle = createGlobalStyle`
     body {
         box-sizing: border-box;
         font-size: 1.8rem;
+        font-family: 'Josefin Sans', sans-serif;
     }
 `;
 
