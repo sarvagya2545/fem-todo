@@ -5,6 +5,7 @@ export const BackgroundImage = styled.div`
     height: 40vh;
     width: 100vw;
     position: fixed;
+    z-index: -1;
 `;
 
 export const BackgroundCover = styled.div`
@@ -13,4 +14,5 @@ export const BackgroundCover = styled.div`
     width: 100vw;
     position: fixed;
     bottom: 0;
+    z-index: -1;
 `;
