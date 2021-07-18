@@ -31,7 +31,8 @@ export const StyledCheckBox = styled.input.attrs({
         background: ${({ theme }) => theme.bg};
     }
 
-    &:checked::before {
+    &:checked::before, 
+    &:hover:not(:disabled)::before {
         background: var(--gradient);
     }
 
