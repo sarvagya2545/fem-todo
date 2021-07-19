@@ -19,11 +19,11 @@ export const TodoText = styled.p`
     color: ${({ theme, completed }) => completed ? theme.textCompleted : theme.text};
     transition: all 0.4s ease;
     
-    & text {
+    & span {
         position: relative;
     }
 
-    & text::after {
+    & span::after {
         content: '';
         position: absolute;
         width: ${({ completed }) => completed ? "100%" : "0%"};
