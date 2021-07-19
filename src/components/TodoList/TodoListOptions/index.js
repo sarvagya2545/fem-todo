@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TodoContext } from '../../../contexts/TodoContext';
 import { ClearCompleted, ItemsFilter, ItemsFilterList, ItemsLeft, TodoOptionsContainer } from './TodoListOptions.elements';
 
+const filters = [
+    { filterType: 'all', label: 'All' },
+    { filterType: 'active', label: 'Active' },
+    { filterType: 'completed', label: 'Completed' }
+]
+
 const TodoOptions = () => {
+    const { leftItems, filter, changeFilter } = useContext(TodoContext);
     return (
         <TodoOptionsContainer justifyContent="space-between" alignItems="center">
-            <ItemsLeft>5 items left</ItemsLeft>
+            <ItemsLeft>{leftItems} items left</ItemsLeft>
             <ItemsFilterList>
-                <ItemsFilter selected>All</ItemsFilter>
-                <ItemsFilter>Active</ItemsFilter>
-                <ItemsFilter>Completed</ItemsFilter>
+                {filters.map(({ filterType, label }) => 
+                    <ItemsFilter
+                        selected={filter === filterType} 
+                        onClick={() => changeFilter(filterType)}
+                    >
+                        {label}
+                    </ItemsFilter>
+                )}
             </ItemsFilterList>
             <ClearCompleted>Clear Completed</ClearCompleted>
         </TodoOptionsContainer>

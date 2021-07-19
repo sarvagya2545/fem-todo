@@ -4,7 +4,8 @@ import { v4 as uuidv4 } from 'uuid';
 export const TodoContext = createContext();
 
 export const TodoContextProvider = ({ children }) => {
-
+    // filter -> 'all' for all, 'completed' for completed tasks, 'active' for incomplete tasks
+    const [filter, setFilter] = useState('all');
     const [todos, setTodos] = useState([
         {
             id: 1,
@@ -33,6 +34,12 @@ export const TodoContextProvider = ({ children }) => {
         },
     ]);
 
+    const filterMap = {
+        all: t => t,
+        active: t => !t.completed,
+        completed: t => t.completed
+    }
+
     const addTodoListItem = (todo) => {
         let newId = uuidv4();
 
@@ -60,8 +67,21 @@ export const TodoContextProvider = ({ children }) => {
         setTodos(todos => todos.filter(todo => todo.id !== todoId));
     }
 
+    const changeFilter = (applied) => {
+        if(applied) 
+            setFilter(applied);
+    }
+
     return (
-        <TodoContext.Provider value={{ todos, addTodoListItem, removeTodo, toggleTodo }}>
+        <TodoContext.Provider value={{ 
+            todos: todos.filter(filterMap[filter]),
+            leftItems: todos.filter(filterMap.active).length,
+            addTodoListItem,
+            removeTodo,
+            toggleTodo,
+            filter,
+            changeFilter
+        }}>
             {children}
         </TodoContext.Provider>
     );
