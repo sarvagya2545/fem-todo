@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TodoContext } from '../../contexts/TodoContext';
 import { TodoListContainer } from './TodoList.elements';
 import TodoListItem from './TodoListItem';
 
 const TodoList = () => {
+    const { todos } = useContext(TodoContext);
     return (
         <TodoListContainer>
-            <TodoListItem completed={true}>Todo List Item</TodoListItem>
-            <TodoListItem>Todo List Item</TodoListItem>
-            <TodoListItem>Todo List Item</TodoListItem>
-            <TodoListItem>Todo List Item</TodoListItem>
-            <TodoListItem>Todo List Item</TodoListItem>
+            {todos.map(todo => <TodoListItem completed={todo.completed} text={todo.todo}/>)}
         </TodoListContainer>
     );
 }

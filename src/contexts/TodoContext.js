@@ -5,7 +5,33 @@ export const TodoContext = createContext();
 
 export const TodoContextProvider = ({ children }) => {
 
-    const [todos, setTodos] = useState([]);
+    const [todos, setTodos] = useState([
+        {
+            id: 1,
+            todo: 'Task 1',
+            completed: false
+        },
+        {
+            id: 2,
+            todo: 'Task 2',
+            completed: true
+        },
+        {
+            id: 3,
+            todo: 'Task 3',
+            completed: false
+        },
+        {
+            id: 4,
+            todo: 'Task 4',
+            completed: true
+        },
+        {
+            id: 5,
+            todo: 'Task 5',
+            completed: false
+        },
+    ]);
 
     const addTodoListItem = (todo) => {
         let newId = uuidv4();
