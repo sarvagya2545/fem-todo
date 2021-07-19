@@ -28,7 +28,7 @@ export const StyledCheckBox = styled.input.attrs({
         inset: 2px;
         border: none;
         border-radius: 50%;
-        background: ${({ theme }) => theme.bg};
+        background: ${({ theme }) => theme.listbg};
     }
 
     &:checked::before, 

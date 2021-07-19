@@ -20,13 +20,17 @@ export const themeColors = {
 export default {
     light: {
         bg: 'hsl(0, 0%, 98%)',
+        listbg: 'hsl(0, 0%, 98%)',
         text: 'hsl(235, 19%, 35%)',
+        placeholder: 'hsl(236, 9%, 61%)',
         primaryColor: 'hsl(220, 98%, 61%)',
         deactivated: 'hsl(236, 33%, 92%)'
     },
     dark: {
         bg: 'hsl(235, 21%, 11%)',
-        text: 'hsl(236, 33%, 92%)',
+        listbg: 'hsl(235, 24%, 19%)',
+        text: 'hsl(234, 39%, 85%)',
+        placeholder: 'hsl(236, 9%, 61%)',
         primaryColor: 'hsl(220, 98%, 61%)',
         deactivated: 'hsl(237, 14%, 26%)'
     }

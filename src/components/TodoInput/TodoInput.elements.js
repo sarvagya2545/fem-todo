@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TodoInputContainer = styled.form`
-    background-color: ${({ theme }) => theme.bg};
+    background-color: ${({ theme }) => theme.listbg};
     width: 100%;
     height: 6rem;
     border-radius: 6px;
@@ -23,4 +23,9 @@ export const TodoInputTextBox = styled.input.attrs({
     font: inherit;
     background: inherit;
     caret-color: ${({ theme }) => theme.primaryColor};
+    color: ${({ theme }) => theme.text};
+    
+    &::placeholder {
+        color: ${({ theme }) => theme.placeholder};
+    }
 `;
