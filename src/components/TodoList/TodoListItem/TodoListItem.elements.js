@@ -21,6 +21,7 @@ export const TodoText = styled.p`
     
     & span {
         position: relative;
+        word-break: break-all;
     }
 
     & span::after {
