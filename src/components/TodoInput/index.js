@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { TodoInputContainer, TodoInputTextBox } from './TodoInput.elements';
 import { StyledCheckBox } from '../shared';
+import { TodoContext } from '../../contexts/TodoContext';
 
 const TodoForm = () => {
-
     const [todoValue, setTodoValue] = useState('');
+    const { addTodoListItem } = useContext(TodoContext);
 
     const onChange = e => setTodoValue(e.target.value);
 
@@ -14,7 +15,7 @@ const TodoForm = () => {
             return alert('Please write todo item before submitting')
         }
 
-        console.log(todoValue);
+        addTodoListItem(todoValue);
     }
 
     return (

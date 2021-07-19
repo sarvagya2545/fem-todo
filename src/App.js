@@ -1,14 +1,17 @@
 import React from 'react';
 import { ThemeContextProvider } from './contexts/ThemeContext';
+import { TodoContextProvider } from './contexts/TodoContext';
 import GlobalStyle from './globalStyles';
 import MainPage from './pages/MainPage';
 
 const App = () => {
     return (
-        <ThemeContextProvider>
-            <GlobalStyle/>
-            <MainPage/>
-        </ThemeContextProvider>
+        <TodoContextProvider>
+            <ThemeContextProvider>
+                <GlobalStyle/>
+                <MainPage/>
+            </ThemeContextProvider>
+        </TodoContextProvider>
     );
 }
 
