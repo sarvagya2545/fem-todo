@@ -42,10 +42,10 @@ export const TodoContextProvider = ({ children }) => {
             completed: false
         }
 
-        setTodos(todos => [ ...todos, todoObj ]);
+        setTodos(todos => [ todoObj, ...todos ]);
     }
 
-    const completeTodoListItem = (todoId) => {
+    const toggleTodo = (todoId) => {
         setTodos(todos => todos.map(todo => {
             if(todo.id !== todoId) return todo;
 
@@ -56,12 +56,12 @@ export const TodoContextProvider = ({ children }) => {
         }));
     }
 
-    const removeTodoListItem = (todoId) => {
+    const removeTodo = (todoId) => {
         setTodos(todos => todos.filter(todo => todo.id !== todoId));
     }
 
     return (
-        <TodoContext.Provider value={{ todos, addTodoListItem, removeTodoListItem, completeTodoListItem }}>
+        <TodoContext.Provider value={{ todos, addTodoListItem, removeTodo, toggleTodo }}>
             {children}
         </TodoContext.Provider>
     );

@@ -7,7 +7,9 @@ const TodoList = () => {
     const { todos } = useContext(TodoContext);
     return (
         <TodoListContainer>
-            {todos.map(todo => <TodoListItem completed={todo.completed} text={todo.todo}/>)}
+            {todos.map(todo => 
+                <TodoListItem completed={todo.completed} text={todo.todo} id={todo.id} key={todo.id}/>
+            )}
         </TodoListContainer>
     );
 }

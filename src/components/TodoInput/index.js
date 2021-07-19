@@ -16,6 +16,7 @@ const TodoForm = () => {
         }
 
         addTodoListItem(todoValue);
+        setTodoValue('');
     }
 
     return (
