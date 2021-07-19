@@ -4,7 +4,7 @@ export const TodoListItems = styled.ul`
     display: flex;
     flex-direction: column;
     overflow: scroll;
-    max-height: 60vh;
+    max-height: calc(100% - 5.6rem);
 `;
 
 export const TodoListContainer = styled.ul`

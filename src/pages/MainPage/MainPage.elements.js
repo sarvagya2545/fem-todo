@@ -10,7 +10,7 @@ export const Container = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
     padding-top: 6rem;
 
     & ${TodoListContainer} {

@@ -10,7 +10,7 @@ export const TodoInputContainer = styled.form`
     justify-content: flex-start;
     align-items: center;
     padding: 2rem;
-    gap: 3rem;
+    gap: 2rem;
 
     transition: background-color var(--transition-time) ease;
 `;
