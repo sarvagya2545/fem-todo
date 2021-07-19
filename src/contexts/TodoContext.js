@@ -72,6 +72,10 @@ export const TodoContextProvider = ({ children }) => {
             setFilter(applied);
     }
 
+    const clearFinishedItems = () => {
+        setTodos(todos => todos.filter(todo => !todo.completed));
+    }
+
     return (
         <TodoContext.Provider value={{ 
             todos: todos.filter(filterMap[filter]),
@@ -80,7 +84,8 @@ export const TodoContextProvider = ({ children }) => {
             removeTodo,
             toggleTodo,
             filter,
-            changeFilter
+            changeFilter,
+            clearFinishedItems
         }}>
             {children}
         </TodoContext.Provider>

@@ -9,7 +9,7 @@ const filters = [
 ]
 
 const TodoOptions = () => {
-    const { leftItems, filter, changeFilter } = useContext(TodoContext);
+    const { leftItems, filter, changeFilter, clearFinishedItems } = useContext(TodoContext);
     return (
         <TodoOptionsContainer justifyContent="space-between" alignItems="center">
             <ItemsLeft>{leftItems} items left</ItemsLeft>
@@ -23,7 +23,7 @@ const TodoOptions = () => {
                     </ItemsFilter>
                 )}
             </ItemsFilterList>
-            <ClearCompleted>Clear Completed</ClearCompleted>
+            <ClearCompleted onClick={clearFinishedItems}>Clear Completed</ClearCompleted>
         </TodoOptionsContainer>
     );
 }
