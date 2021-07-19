@@ -22,16 +22,22 @@ export default {
         bg: 'hsl(0, 0%, 98%)',
         listbg: 'hsl(0, 0%, 98%)',
         text: 'hsl(235, 19%, 35%)',
+        textCompleted: 'hsl(233, 11%, 84%)',
         placeholder: 'hsl(236, 9%, 61%)',
         primaryColor: 'hsl(220, 98%, 61%)',
-        deactivated: 'hsl(236, 33%, 92%)'
+        deactivated: 'hsl(236, 33%, 92%)',
+        separator: 'hsl(236, 33%, 92%)',
+        shadow: 'hsl(236, 33%, 92%)'
     },
     dark: {
         bg: 'hsl(235, 21%, 11%)',
         listbg: 'hsl(235, 24%, 19%)',
         text: 'hsl(234, 39%, 85%)',
+        textCompleted: 'hsl(233, 14%, 35%)',
         placeholder: 'hsl(236, 9%, 61%)',
         primaryColor: 'hsl(220, 98%, 61%)',
-        deactivated: 'hsl(237, 14%, 26%)'
+        deactivated: 'hsl(237, 14%, 26%)',
+        separator: 'hsl(235, 19%, 35%)',
+        shadow: 'rgba(0,0,0,0.4)'
     }
 }
