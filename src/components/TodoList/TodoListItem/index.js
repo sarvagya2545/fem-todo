@@ -13,7 +13,7 @@ const TodoListItem = ({ completed, text, id }) => {
         <TodoListItemContainer>
             <StyledCheckBox checked={completed} onChange={toggleTodoListItem}/>
             <TodoText completed={completed}>
-                {text}
+                <text>{text}</text>
             </TodoText>
             <TodoRemoveButton onClick={deleteTodoListItem}>
                 <img src={closeBtnIcon} alt="delete" />

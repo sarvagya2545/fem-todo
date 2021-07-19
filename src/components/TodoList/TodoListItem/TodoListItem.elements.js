@@ -17,22 +17,48 @@ export const TodoText = styled.p`
     flex: 1;
     margin: 0 2rem;
     color: ${({ theme, completed }) => completed ? theme.textCompleted : theme.text};
+    transition: all 0.4s ease;
+    
+    & text {
+        position: relative;
+    }
 
-    text-decoration: ${({ completed }) => completed ? 'line-through' : 'none'};
+    & text::after {
+        content: '';
+        position: absolute;
+        width: ${({ completed }) => completed ? "100%" : "0%"};
+        height: 1px;
+        background-color: ${({ theme, completed }) => completed ? theme.textCompleted : theme.text};
+        left: 0;
+        right: 0;
+        top: calc(50% - 1px);
+        transition: all 0.4s ease;
+    }
 `;
 
 export const TodoRemoveButton = styled.button`
     border: none;
     background-color: inherit;
 
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 
     /* centering the grid */
     display: grid;
     place-items: center;
+    position: relative;
 
     &:hover {
         cursor: pointer;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: -1rem;
+    }
+
+    &:hover::before {
+        background-color: ${({ theme }) => theme.separator};
     }
 
     & img {
