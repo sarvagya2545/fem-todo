@@ -14,8 +14,9 @@ const TodoOptions = () => {
         <TodoOptionsContainer justifyContent="space-between" alignItems="center">
             <ItemsLeft>{leftItems} items left</ItemsLeft>
             <ItemsFilterList>
-                {filters.map(({ filterType, label }) => 
+                {filters.map(({ filterType, label }, index) => 
                     <ItemsFilter
+                        key={index}
                         selected={filter === filterType} 
                         onClick={() => changeFilter(filterType)}
                     >
