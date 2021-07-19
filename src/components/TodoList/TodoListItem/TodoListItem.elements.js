@@ -63,7 +63,11 @@ export const TodoRemoveButton = styled.button`
     }
 
     & img {
+        --size: 18px;
+
         filter: invert(88%) sepia(17%) saturate(103%) hue-rotate(198deg) brightness(103%) contrast(91%);
+        width: var(--size);
+        height: var(--size);
     }
 
     ${TodoListItemContainer} & {

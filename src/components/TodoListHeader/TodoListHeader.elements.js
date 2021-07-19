@@ -9,4 +9,11 @@ export const Heading = styled.h1`
 export const ThemeButton = styled.button`
     all: unset;
     cursor: pointer;
+    display: grid;
+    place-items: center;
+    
+    & img {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
 `;
