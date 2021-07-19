@@ -77,7 +77,7 @@ export const TodoContextProvider = ({ children }) => {
     }
 
     const reorderTodo = (startIndex, destinationIndex, id) => {
-        console.log(startIndex, destinationIndex, id);
+        // console.log(startIndex, destinationIndex, id);
         let reorderTodo = todos.find(todo => todo.id === id);
         let newTodos = Array.from(todos);
 
