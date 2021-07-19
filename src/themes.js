@@ -27,7 +27,9 @@ export default {
         primaryColor: 'hsl(220, 98%, 61%)',
         deactivated: 'hsl(236, 33%, 92%)',
         separator: 'hsl(236, 33%, 92%)',
-        shadow: 'hsl(236, 33%, 92%)'
+        shadow: 'hsl(236, 33%, 92%)',
+        footerItem: 'hsl(236, 9%, 61%)',
+        footerItemHover: 'hsl(235, 19%, 35%)'
     },
     dark: {
         bg: 'hsl(235, 21%, 11%)',
@@ -38,6 +40,8 @@ export default {
         primaryColor: 'hsl(220, 98%, 61%)',
         deactivated: 'hsl(237, 14%, 26%)',
         separator: 'hsl(235, 19%, 35%)',
-        shadow: 'rgba(0,0,0,0.4)'
+        shadow: 'rgba(0,0,0,0.4)',
+        footerItem: 'hsl(234, 11%, 52%)',
+        footerItemHover: 'hsl(236, 33%, 92%)'
     }
 }
