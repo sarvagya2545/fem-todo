@@ -1,38 +1,17 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
+import { saveTodoList, getTodoList } from '../persistToLocalStorage';
 
 export const TodoContext = createContext();
 
 export const TodoContextProvider = ({ children }) => {
     // filter -> 'all' for all, 'completed' for completed tasks, 'active' for incomplete tasks
     const [filter, setFilter] = useState('all');
-    const [todos, setTodos] = useState([
-        {
-            id: '1',
-            todo: 'Task 1',
-            completed: false
-        },
-        {
-            id: '2',
-            todo: 'Task 2',
-            completed: true
-        },
-        {
-            id: '3',
-            todo: 'Task 3',
-            completed: false
-        },
-        {
-            id: '4',
-            todo: 'Task 4',
-            completed: true
-        },
-        {
-            id: '5',
-            todo: 'Task 5',
-            completed: false
-        },
-    ]);
+    const [todos, setTodos] = useState(JSON.parse(getTodoList()) || []);
+
+    useEffect(() => {
+        saveTodoList(todos);
+    }, [todos]);
 
     const filterMap = {
         all: t => t,
