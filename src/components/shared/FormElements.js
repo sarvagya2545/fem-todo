@@ -10,6 +10,10 @@ export const StyledCheckBox = styled.input.attrs({
     cursor: pointer;
     visibility: hidden;
 
+    &, &::before, &::after {
+        transition: background-color var(--transition-time) ease;
+    }
+
     &::before {
         content: '';
         position: absolute;

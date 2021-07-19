@@ -40,7 +40,7 @@ export const TodoRemoveButton = styled.button`
     border: none;
     background-color: inherit;
 
-    transition: all 0.2s ease;
+    transition: all var(--transition-time) ease;
 
     /* centering the grid */
     display: grid;

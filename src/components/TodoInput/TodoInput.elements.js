@@ -11,6 +11,8 @@ export const TodoInputContainer = styled.form`
     align-items: center;
     padding: 2rem;
     gap: 3rem;
+
+    transition: background-color var(--transition-time) ease;
 `;
 
 export const TodoInputTextBox = styled.input.attrs({
@@ -28,4 +30,6 @@ export const TodoInputTextBox = styled.input.attrs({
     &::placeholder {
         color: ${({ theme }) => theme.placeholder};
     }
+
+    transition: color var(--transition-time) ease;
 `;

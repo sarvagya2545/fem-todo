@@ -5,3 +5,8 @@ export const Heading = styled.h1`
     font-size: 4rem;
     letter-spacing: 10px;
 `;
+
+export const ThemeButton = styled.button`
+    all: unset;
+    cursor: pointer;
+`;

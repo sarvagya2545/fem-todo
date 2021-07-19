@@ -6,6 +6,8 @@ export const BackgroundImage = styled.div`
     width: 100vw;
     position: fixed;
     z-index: -1;
+
+    transition: background var(--transition-time) ease;
 `;
 
 export const BackgroundCover = styled.div`
@@ -15,4 +17,6 @@ export const BackgroundCover = styled.div`
     position: fixed;
     bottom: 0;
     z-index: -1;
+
+    transition: background var(--transition-time) ease;
 `;

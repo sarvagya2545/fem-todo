@@ -5,10 +5,12 @@ export const TodoOptionsContainer = styled(FlexBox)`
     padding: 2rem;
     font-size: 1.6rem;
     background-color: ${({ theme }) => theme.listbg};
+    transition: background-color var(--transition-time) ease;
 `;
 
 export const ItemsLeft = styled.span`
-    color: ${({ theme }) => theme.footerItem}
+    color: ${({ theme }) => theme.footerItem};
+    transition: color var(--transition-time) ease;
 `;
 
 export const ItemsFilterList = styled.ul`
@@ -26,6 +28,8 @@ export const ItemsFilter = styled.li`
         color: ${({ theme, selected }) => selected ? theme.primaryColor : theme.footerItemHover};
         cursor: ${({ selected }) => selected ? 'inherit' : 'pointer'};
     }
+
+    transition: color var(--transition-time) ease;
 `;
 
 export const ClearCompleted = styled.button`
@@ -36,4 +40,6 @@ export const ClearCompleted = styled.button`
         color: ${({ theme }) => theme.footerItemHover};
         cursor: pointer;
     }
+
+    transition: color var(--transition-time) ease;
 `;

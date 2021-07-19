@@ -7,4 +7,5 @@ export const TodoListContainer = styled.ul`
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 30px 30px ${({ theme }) => theme.shadow};
+    transition: box-shadow var(--transition-time) ease;
 `;
