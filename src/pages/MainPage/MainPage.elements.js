@@ -11,9 +11,16 @@ export const Container = styled.main`
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    padding: 4rem 0;
+    padding-top: 6rem;
 
     & ${TodoListContainer} {
         margin-bottom: auto;
+        @media screen and (max-width: 700px) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 5rem 4rem;
     }
 `;

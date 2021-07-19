@@ -40,7 +40,7 @@ export const TodoRemoveButton = styled.button`
     border: none;
     background-color: inherit;
 
-    transition: all var(--transition-time) ease;
+    transition: all 0.2s ease;
 
     /* centering the grid */
     display: grid;
@@ -67,6 +67,10 @@ export const TodoRemoveButton = styled.button`
 
     ${TodoListItemContainer} & {
         transform: scale(0);
+
+        @media screen and (max-width: 700px) {
+            transform: scale(1);
+        }
     }
 
     ${TodoListItemContainer}:hover & {
