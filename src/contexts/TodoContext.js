@@ -8,27 +8,27 @@ export const TodoContextProvider = ({ children }) => {
     const [filter, setFilter] = useState('all');
     const [todos, setTodos] = useState([
         {
-            id: 1,
+            id: '1',
             todo: 'Task 1',
             completed: false
         },
         {
-            id: 2,
+            id: '2',
             todo: 'Task 2',
             completed: true
         },
         {
-            id: 3,
+            id: '3',
             todo: 'Task 3',
             completed: false
         },
         {
-            id: 4,
+            id: '4',
             todo: 'Task 4',
             completed: true
         },
         {
-            id: 5,
+            id: '5',
             todo: 'Task 5',
             completed: false
         },
@@ -76,6 +76,22 @@ export const TodoContextProvider = ({ children }) => {
         setTodos(todos => todos.filter(todo => !todo.completed));
     }
 
+    const reorderTodo = (startIndex, destinationIndex, id) => {
+        console.log(startIndex, destinationIndex, id);
+        let reorderTodo = todos.find(todo => todo.id === id);
+        let newTodos = Array.from(todos);
+
+        let startId = newTodos.filter(filterMap[filter])[startIndex].id;
+        let destinationId = newTodos.filter(filterMap[filter])[destinationIndex].id;
+
+        let actualStartIndex = newTodos.findIndex(todo => todo.id === startId);
+        let actualDestinationIndex = newTodos.findIndex(todo => todo.id === destinationId);
+
+        newTodos.splice(actualStartIndex, 1);
+        newTodos.splice(actualDestinationIndex, 0, reorderTodo);
+        setTodos(newTodos);
+    }
+
     return (
         <TodoContext.Provider value={{ 
             todos: todos.filter(filterMap[filter]),
@@ -85,7 +101,8 @@ export const TodoContextProvider = ({ children }) => {
             toggleTodo,
             filter,
             changeFilter,
-            clearFinishedItems
+            clearFinishedItems,
+            reorderTodo
         }}>
             {children}
         </TodoContext.Provider>
