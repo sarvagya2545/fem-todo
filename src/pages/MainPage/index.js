@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { Background, TodoInput, TodoListHeader, TodoList, TodoItemsFilterList, Credits } from '../../components';
-import { Container } from './MainPage.elements';
+import { Container, TargetLink } from './MainPage.elements';
 import themes from '../../themes';
 
 const MainPage = () => {
@@ -16,7 +16,11 @@ const MainPage = () => {
                 <TodoInput/>
                 <TodoList/>
                 <TodoItemsFilterList mobileOnly container/>
-                <Credits>Made with ❤️ by Sarvagya Sharma</Credits>
+                <Credits>
+                    Challenge By <TargetLink href="https://www.frontendmentor.io/">FrontendMentor</TargetLink>.
+                    <br/>
+                    Made with ❤️ by <TargetLink href="https://github.com/sarvagya2545">Sarvagya Sharma</TargetLink>
+                </Credits>
             </Container>
         </ThemeProvider>
     );

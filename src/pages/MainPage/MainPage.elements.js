@@ -24,3 +24,11 @@ export const Container = styled.main`
         padding: 5rem 4rem;
     }
 `;
+
+export const TargetLink = styled.a.attrs(props => ({
+    target: '_blank',
+    rel: 'noopener noreferrer'
+}))`
+    color: ${({ theme }) => theme.primaryColor};
+    text-decoration: none;
+`;

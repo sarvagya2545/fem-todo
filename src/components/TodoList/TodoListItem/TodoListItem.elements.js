@@ -9,8 +9,6 @@ export const TodoListItemContainer = styled.li`
 
     background: ${({ theme }) => theme.listbg};
     border-bottom: 1px solid ${({ theme }) => theme.separator};
-
-    cursor: move;
 `;
 
 export const TodoText = styled.p`
