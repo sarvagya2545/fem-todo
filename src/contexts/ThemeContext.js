@@ -4,9 +4,7 @@ import { saveThemePreference, getThemePreference } from '../persistToLocalStorag
 export const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
-    const [theme, setTheme] = useState(
-        getThemePreference() || 'dark'
-    );
+    const [theme, setTheme] = useState(getThemePreference());
 
     const toggleTheme = () => setTheme(t => t === 'light' ? 'dark' : 'light');
 
