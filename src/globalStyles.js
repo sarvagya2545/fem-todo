@@ -6,6 +6,9 @@ const globalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: inherit;
         font-family: inherit;
+    }
+
+    *:not(input) {
         user-select: none;
     }
 

@@ -4,6 +4,7 @@ import checkImg from '/images/icon-check.svg';
 export const StyledCheckBox = styled.input.attrs({
     type: 'checkbox'
 })`
+    appearance: none;
     position: relative;
     width: 25px;
     height: 25px;
