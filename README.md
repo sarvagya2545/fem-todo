@@ -35,6 +35,8 @@ Users should be able to:
 
 ### Screenshot
 
+![Screenshot 2021-07-21 at 11 59 18 PM](https://user-images.githubusercontent.com/59908012/126542860-f3e370d3-1cd5-4889-ae3a-d8c759a2c638.png)
+
 ### Links
 
 - Solution URL: [Will add soon](#)
