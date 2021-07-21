@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Will add soon](#)
+- Solution URL: [Frontend Mentor Link](https://www.frontendmentor.io/solutions/reactjs-solution-save-the-list-and-theme-preferences-on-the-device-_e5Wvg1eh)
 - Live Site URL: [https://modest-mcclintock-f612c0.netlify.app/](https://modest-mcclintock-f612c0.netlify.app/)
 
 ## My process
