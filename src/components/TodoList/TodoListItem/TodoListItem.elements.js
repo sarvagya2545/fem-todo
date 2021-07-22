@@ -9,13 +9,15 @@ export const TodoListItemContainer = styled.li`
 
     background: ${({ theme }) => theme.listbg};
     border-bottom: 1px solid ${({ theme }) => theme.separator};
+
+    transition: all var(--transition-time) ease;
 `;
 
 export const TodoText = styled.p`
     flex: 1;
     margin: 0 2rem;
     color: ${({ theme, completed }) => completed ? theme.textCompleted : theme.text};
-    transition: all 0.4s ease;
+    transition: all var(--transition-time) ease;
     
     & span {
         position: relative;
@@ -31,7 +33,7 @@ export const TodoText = styled.p`
         left: 0;
         right: 0;
         top: calc(50% - 1px);
-        transition: all 0.4s ease;
+        transition: all var(--transition-time) ease;
     }
 `;
 
@@ -39,7 +41,7 @@ export const TodoRemoveButton = styled.button`
     border: none;
     background-color: inherit;
 
-    transition: all 0.2s ease;
+    transition: all var(--transition-time) ease;
 
     /* centering the grid */
     display: grid;

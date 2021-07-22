@@ -11,6 +11,8 @@ export const FilterContainer = styled.div`
     padding: 2rem;
     border-radius: 4px;
     margin-top: auto;
+
+    transition: all var(--transition-time) ease;
 `;
 
 export const ItemsFilterList = styled.ul`

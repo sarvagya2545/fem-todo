@@ -5,6 +5,8 @@ const CreditText = styled.p`
     text-align: center;
     color: ${({ theme }) => theme.text};
     margin: 3rem;
+
+    transition: color var(--transition-time) ease;
 `;
 
 const Credits = ({ children }) => {
