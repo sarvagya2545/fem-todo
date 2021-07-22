@@ -7,7 +7,7 @@ export const TodoListItems = styled.ul`
     max-height: calc(100% - 5.6rem);
 `;
 
-export const TodoListContainer = styled.ul`
+export const TodoListContainer = styled.div`
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 30px 30px ${({ theme }) => theme.shadow};
